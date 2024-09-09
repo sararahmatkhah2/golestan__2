@@ -1,0 +1,326 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+body {
+  direction: rtl;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+@font-face {
+  font-family: IranSans;
+  src: url("../assets/fonts/IRANSansWeb-Light.ttf");
+  src: url("../assets/fonts/IRANSansWeb-Light.woff");
+  src: url("../assets/fonts/IRANSansWeb-Light.woff2");
+}
+header {
+  width: 100%;
+  background-image: url(https://www.golestan.com/wp-content/uploads/2023/01/header-back-1.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: fixed;
+  top: 0;
+  unicode-bidi: isolate;
+  z-index: 99999;
+  img {
+    position: relative;
+    top: 50px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
+
+  nav {
+    display: flex;
+    .menu__item {
+      color: rgb(155, 155, 155);
+      text-decoration: none;
+      border-left: 1px solid rgb(102, 102, 102);
+      position: relative;
+      padding: 0 15px;
+      cursor: pointer;
+      p{
+        &:hover{
+          color: #fff;
+        }
+      }
+      .menu__item__link {
+        text-decoration: none;
+        color: rgb(155, 155, 155);
+      }
+      .sub__menu {
+        background-color: #525151;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        color: rgb(125, 127, 129);
+        .sub__menu__item {
+          padding: 17px;
+          text-decoration: none;
+          white-space: nowrap;
+          color: #757677;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+      &:hover {
+        .sub__menu {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+.text__velog {
+  background-color: white;
+  color: red;
+  font-size: 22px;
+  font-weight: 600;
+  margin-right: 100px;
+}
+.parent-velog {
+  width: 100%;
+  background-color: rgb(246, 251, 255);
+  border: 15px;
+  border-color: #000;
+  max-width: 1300px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 80px 100px;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  font-family: IranSans;
+  .child {
+    width: 350px;
+    border-right: 2px solid rgba(128, 128, 128, 0.493);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.493);
+
+    background-color: white;
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .text {
+      padding: 20px;
+      width: 330px;
+      margin-top: 5px;
+      .h2 {
+        font-size: 20px;
+        font-weight: 200;
+        padding: 5px;
+        color: rgb(238, 16, 16);
+      }
+      .p {
+        padding: 5px;
+        color: #7c7d7e;
+        height: 130px;
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 30px;
+      }
+      .button {
+        margin: 5px 0px;
+        padding: 7px 20px;
+        border: 1px solid #c8c8c8;
+        border-radius: 8px;
+        color: #7c7d7e;
+        text-align: center;
+        font-size: 15px;
+        background-color: #ffffff;
+        text-decoration: none;
+        margin-left: 5px;
+        &:hover {
+          background-color: red;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+.banner {
+  background-image: -o-linear-gradient(rgb(146, 143, 143), white);
+  height: 130px;
+}
+.parent__video-velog {
+  width: 100%;
+  background-color: rgb(246, 251, 255);
+  border: 15px;
+  border-color: #000;
+  max-width: 1300px;
+  display: flex;
+  justify-content: center;
+  gap: 80px 100px;
+  flex-wrap: wrap;
+  margin: 60px auto;
+  font-family: IranSans;
+  .child {
+    width: 350px;
+    border-right: 2px solid rgba(128, 128, 128, 0.493);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.493);
+
+    background-color: white;
+    video {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .text {
+      padding: 20px;
+      width: 330px;
+      margin-top: 5px;
+      .h2 {
+        font-size: 20px;
+        font-weight: 200;
+        padding: 5px;
+        color: rgb(238, 16, 16);
+      }
+      .p {
+        padding: 5px;
+        color: #7c7d7e;
+        height: 130px;
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 30px;
+      }
+      .button {
+        margin: 5px 0px;
+        padding: 7px 20px;
+        border: 1px solid #c8c8c8;
+        border-radius: 8px;
+        color: #7c7d7e;
+        text-align: center;
+        font-size: 15px;
+        background-color: #ffffff;
+        text-decoration: none;
+        margin-left: 5px;
+        &:hover {
+          background-color: red;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.link__apps {
+  width: 100%;
+  height: 95px;
+  background-color: #eeefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  .link__apps__box {
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    transition-property: all;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+  }
+  .facebook__box {
+    background-image: url(../assets/images/facebook.png);
+    &:hover {
+      background-image: url(../assets/images/facebookcolor.png);
+    }
+  }
+  .linkdin__box {
+    background-image: url(../assets/images/linkdin.png);
+    &:hover {
+      background-image: url(../assets/images/linkdincolor.png);
+    }
+  }
+  .insta__box {
+    background-image: url(../assets/images/instagram.png);
+    &:hover {
+      background-image: url(../assets/images/instagramcolor.png);
+    }
+  }
+  .telegram__box {
+    background-image: url(../assets/images/telegram.png);
+    &:hover {
+      background-image: url(../assets/images/telegramcolor.png);
+    }
+  }
+  .aparat__box {
+    background-image: url(../assets/images/aparat.png);
+    &:hover {
+      background-image: url(../assets/images/aparatcolor.png);
+    }
+  }
+  .gl__box {
+    background-image: url(../assets/images/gl.png);
+    &:hover {
+      background-image: url(../assets/images/glcolor.png);
+    }
+  }
+}
+.liner__velog {
+  min-height: 30px;
+  background-color: rgb(255, 32, 32);
+}
+.footer__velog {
+  background-color: rgb(44, 44, 44);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  .list__velog__img {
+    border-bottom: 1px solid rgb(129, 126, 126);
+    margin: 15px;
+  }
+  .list__velog__item {
+    h2 {
+      border-bottom: 1px solid rgb(129, 126, 126);
+      margin: 14px;
+      text-align: center;
+      color: #ffffff;
+      font-family: IranSans;
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 1;
+      padding: 5px;
+    }
+    span {
+      text-align: start;
+      margin: 15px;
+      color: rgb(143, 140, 140);
+      font-family: IranSans;
+      font-size: 13px;
+      font-weight: 100;
+      line-height: 1;
+      padding: 7px;
+      display: block;
+    }
+  }
+}
+.footer__velog__two {
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  .footer__velog__two__text {
+    padding: 15px;
+    span {
+      font-family: IranSans;
+      font-size: 15px;
+      margin-right: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+    .one__span {
+      margin-right: 30px;
+      color: #9f9f9f;
+    }
+    .two__span {
+      margin-right: 100px;
+      margin-bottom: 200px;
+      color: #7b7b7b;
+    }
+  }
+}
